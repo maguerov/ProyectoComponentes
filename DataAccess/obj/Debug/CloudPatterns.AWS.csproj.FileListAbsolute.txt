@@ -1,0 +1,34 @@
+C:\Projects\CloudPatterns\src\CloudPatterns.AWS\bin\Debug\CloudPatterns.AWS.dll.config
+C:\Projects\CloudPatterns\src\CloudPatterns.AWS\bin\Debug\CloudPatterns.AWS.dll
+C:\Projects\CloudPatterns\src\CloudPatterns.AWS\bin\Debug\CloudPatterns.AWS.pdb
+C:\Projects\CloudPatterns\src\CloudPatterns.AWS\bin\Debug\AWSSDK.dll
+C:\Projects\CloudPatterns\src\CloudPatterns.AWS\bin\Debug\AWSSDK.pdb
+C:\Projects\CloudPatterns\src\CloudPatterns.AWS\obj\Debug\CloudPatterns.AWS.csprojResolveAssemblyReference.cache
+C:\Projects\CloudPatterns\src\CloudPatterns.AWS\obj\Debug\CloudPatterns.AWS.dll
+C:\Projects\CloudPatterns\src\CloudPatterns.AWS\obj\Debug\CloudPatterns.AWS.pdb
+C:\Users\Miguel Gutierrez\Documents\Cenfotec\8 Cuatri\Componentes\Proyecto\cloudpatterns\src\CloudPatterns.AWS\bin\Debug\CloudPatterns.AWS.dll.config
+C:\Users\Miguel Gutierrez\Documents\Cenfotec\8 Cuatri\Componentes\Proyecto\cloudpatterns\src\CloudPatterns.AWS\bin\Debug\CloudPatterns.AWS.dll
+C:\Users\Miguel Gutierrez\Documents\Cenfotec\8 Cuatri\Componentes\Proyecto\cloudpatterns\src\CloudPatterns.AWS\bin\Debug\CloudPatterns.AWS.pdb
+C:\Users\Miguel Gutierrez\Documents\Cenfotec\8 Cuatri\Componentes\Proyecto\cloudpatterns\src\CloudPatterns.AWS\bin\Debug\AWSSDK.dll
+C:\Users\Miguel Gutierrez\Documents\Cenfotec\8 Cuatri\Componentes\Proyecto\cloudpatterns\src\CloudPatterns.AWS\bin\Debug\AWSSDK.pdb
+C:\Users\Miguel Gutierrez\Documents\Cenfotec\8 Cuatri\Componentes\Proyecto\cloudpatterns\src\CloudPatterns.AWS\obj\Debug\CloudPatterns.AWS.csprojAssemblyReference.cache
+C:\Users\Miguel Gutierrez\Documents\Cenfotec\8 Cuatri\Componentes\Proyecto\cloudpatterns\src\CloudPatterns.AWS\obj\Debug\CloudPatterns.AWS.csproj.CopyComplete
+C:\Users\Miguel Gutierrez\Documents\Cenfotec\8 Cuatri\Componentes\Proyecto\cloudpatterns\src\CloudPatterns.AWS\obj\Debug\CloudPatterns.AWS.dll
+C:\Users\Miguel Gutierrez\Documents\Cenfotec\8 Cuatri\Componentes\Proyecto\cloudpatterns\src\CloudPatterns.AWS\obj\Debug\CloudPatterns.AWS.pdb
+C:\Users\user\Desktop\Componentes\ProyectoFinal\cloudpatterns\src\CloudPatterns.AWS\obj\Debug\CloudPatterns.AWS.dll
+C:\Users\user\Desktop\Componentes\ProyectoFinal\cloudpatterns\src\CloudPatterns.AWS\obj\Debug\CloudPatterns.AWS.pdb
+C:\Users\user\Desktop\Componentes\ProyectoFinal\cloudpatterns\src\CloudPatterns.AWS\bin\Debug\CloudPatterns.AWS.dll.config
+C:\Users\user\Desktop\Componentes\ProyectoFinal\cloudpatterns\src\CloudPatterns.AWS\bin\Debug\CloudPatterns.AWS.dll
+C:\Users\user\Desktop\Componentes\ProyectoFinal\cloudpatterns\src\CloudPatterns.AWS\bin\Debug\CloudPatterns.AWS.pdb
+C:\Users\user\Desktop\Componentes\ProyectoFinal\cloudpatterns\src\CloudPatterns.AWS\bin\Debug\AWSSDK.dll
+C:\Users\user\Desktop\Componentes\ProyectoFinal\cloudpatterns\src\CloudPatterns.AWS\bin\Debug\AWSSDK.pdb
+C:\Users\user\Desktop\Componentes\ProyectoFinal\cloudpatterns\src\CloudPatterns.AWS\obj\Debug\CloudPatterns.AWS.csprojAssemblyReference.cache
+C:\Users\user\Desktop\Componentes\ProyectoFinal\cloudpatterns\src\CloudPatterns.AWS\obj\Debug\CloudPatterns.AWS.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Componentes\ProyectoFinal\cloudpatterns\src\CloudPatterns.AWS\obj\Debug\CloudPatterns.AWS.csproj.CopyComplete
+C:\Users\user\Desktop\ProyectoComponentes\DataAccess\bin\Debug\CloudPatterns.AWS.dll.config
+C:\Users\user\Desktop\ProyectoComponentes\DataAccess\bin\Debug\CloudPatterns.AWS.dll
+C:\Users\user\Desktop\ProyectoComponentes\DataAccess\bin\Debug\CloudPatterns.AWS.pdb
+C:\Users\user\Desktop\ProyectoComponentes\DataAccess\obj\Debug\CloudPatterns.AWS.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\ProyectoComponentes\DataAccess\obj\Debug\CloudPatterns.AWS.csproj.CopyComplete
+C:\Users\user\Desktop\ProyectoComponentes\DataAccess\obj\Debug\CloudPatterns.AWS.dll
+C:\Users\user\Desktop\ProyectoComponentes\DataAccess\obj\Debug\CloudPatterns.AWS.pdb

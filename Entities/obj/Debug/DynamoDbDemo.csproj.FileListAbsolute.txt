@@ -1,0 +1,47 @@
+C:\Projects\CloudPatterns\src\DynamoDbDemo\bin\Debug\DynamoDbDemo.exe.config
+C:\Projects\CloudPatterns\src\DynamoDbDemo\bin\Debug\DynamoDbDemo.exe
+C:\Projects\CloudPatterns\src\DynamoDbDemo\bin\Debug\DynamoDbDemo.pdb
+C:\Projects\CloudPatterns\src\DynamoDbDemo\bin\Debug\AWSSDK.dll
+C:\Projects\CloudPatterns\src\DynamoDbDemo\bin\Debug\CloudPatterns.AWS.dll
+C:\Projects\CloudPatterns\src\DynamoDbDemo\bin\Debug\CloudPatterns.AWS.pdb
+C:\Projects\CloudPatterns\src\DynamoDbDemo\bin\Debug\AWSSDK.pdb
+C:\Projects\CloudPatterns\src\DynamoDbDemo\obj\Debug\DynamoDbDemo.csprojResolveAssemblyReference.cache
+C:\Projects\CloudPatterns\src\DynamoDbDemo\obj\Debug\DynamoDbDemo.exe
+C:\Projects\CloudPatterns\src\DynamoDbDemo\obj\Debug\DynamoDbDemo.pdb
+C:\Users\Miguel Gutierrez\Documents\Cenfotec\8 Cuatri\Componentes\Proyecto\cloudpatterns\src\DynamoDbDemo\bin\Debug\DynamoDbDemo.exe.config
+C:\Users\Miguel Gutierrez\Documents\Cenfotec\8 Cuatri\Componentes\Proyecto\cloudpatterns\src\DynamoDbDemo\bin\Debug\DynamoDbDemo.exe
+C:\Users\Miguel Gutierrez\Documents\Cenfotec\8 Cuatri\Componentes\Proyecto\cloudpatterns\src\DynamoDbDemo\bin\Debug\DynamoDbDemo.pdb
+C:\Users\Miguel Gutierrez\Documents\Cenfotec\8 Cuatri\Componentes\Proyecto\cloudpatterns\src\DynamoDbDemo\bin\Debug\AWSSDK.dll
+C:\Users\Miguel Gutierrez\Documents\Cenfotec\8 Cuatri\Componentes\Proyecto\cloudpatterns\src\DynamoDbDemo\bin\Debug\CloudPatterns.AWS.dll
+C:\Users\Miguel Gutierrez\Documents\Cenfotec\8 Cuatri\Componentes\Proyecto\cloudpatterns\src\DynamoDbDemo\bin\Debug\CloudPatterns.AWS.pdb
+C:\Users\Miguel Gutierrez\Documents\Cenfotec\8 Cuatri\Componentes\Proyecto\cloudpatterns\src\DynamoDbDemo\bin\Debug\CloudPatterns.AWS.dll.config
+C:\Users\Miguel Gutierrez\Documents\Cenfotec\8 Cuatri\Componentes\Proyecto\cloudpatterns\src\DynamoDbDemo\bin\Debug\AWSSDK.pdb
+C:\Users\Miguel Gutierrez\Documents\Cenfotec\8 Cuatri\Componentes\Proyecto\cloudpatterns\src\DynamoDbDemo\obj\Debug\DynamoDbDemo.csprojAssemblyReference.cache
+C:\Users\Miguel Gutierrez\Documents\Cenfotec\8 Cuatri\Componentes\Proyecto\cloudpatterns\src\DynamoDbDemo\obj\Debug\DynamoDbDemo.csproj.CopyComplete
+C:\Users\Miguel Gutierrez\Documents\Cenfotec\8 Cuatri\Componentes\Proyecto\cloudpatterns\src\DynamoDbDemo\obj\Debug\DynamoDbDemo.exe
+C:\Users\Miguel Gutierrez\Documents\Cenfotec\8 Cuatri\Componentes\Proyecto\cloudpatterns\src\DynamoDbDemo\obj\Debug\DynamoDbDemo.pdb
+C:\Users\user\Desktop\Componentes\ProyectoFinal\cloudpatterns\src\DynamoDbDemo\obj\Debug\DynamoDbDemo.csprojAssemblyReference.cache
+C:\Users\user\Desktop\Componentes\ProyectoFinal\cloudpatterns\src\DynamoDbDemo\obj\Debug\DynamoDbDemo.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Componentes\ProyectoFinal\cloudpatterns\src\DynamoDbDemo\obj\Debug\DynamoDbDemo.exe
+C:\Users\user\Desktop\Componentes\ProyectoFinal\cloudpatterns\src\DynamoDbDemo\obj\Debug\DynamoDbDemo.pdb
+C:\Users\user\Desktop\Componentes\ProyectoFinal\cloudpatterns\src\DynamoDbDemo\bin\Debug\DynamoDbDemo.exe.config
+C:\Users\user\Desktop\Componentes\ProyectoFinal\cloudpatterns\src\DynamoDbDemo\bin\Debug\DynamoDbDemo.exe
+C:\Users\user\Desktop\Componentes\ProyectoFinal\cloudpatterns\src\DynamoDbDemo\bin\Debug\DynamoDbDemo.pdb
+C:\Users\user\Desktop\Componentes\ProyectoFinal\cloudpatterns\src\DynamoDbDemo\bin\Debug\AWSSDK.dll
+C:\Users\user\Desktop\Componentes\ProyectoFinal\cloudpatterns\src\DynamoDbDemo\bin\Debug\CloudPatterns.AWS.dll
+C:\Users\user\Desktop\Componentes\ProyectoFinal\cloudpatterns\src\DynamoDbDemo\bin\Debug\CloudPatterns.AWS.pdb
+C:\Users\user\Desktop\Componentes\ProyectoFinal\cloudpatterns\src\DynamoDbDemo\bin\Debug\CloudPatterns.AWS.dll.config
+C:\Users\user\Desktop\Componentes\ProyectoFinal\cloudpatterns\src\DynamoDbDemo\bin\Debug\AWSSDK.pdb
+C:\Users\user\Desktop\Componentes\ProyectoFinal\cloudpatterns\src\DynamoDbDemo\obj\Debug\DynamoDbDemo.csproj.CopyComplete
+C:\Users\user\Desktop\ProyectoComponentes\Entities\obj\Debug\DynamoDbDemo.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\ProyectoComponentes\Entities\bin\Debug\DynamoDbDemo.exe.config
+C:\Users\user\Desktop\ProyectoComponentes\Entities\bin\Debug\DynamoDbDemo.exe
+C:\Users\user\Desktop\ProyectoComponentes\Entities\bin\Debug\DynamoDbDemo.pdb
+C:\Users\user\Desktop\ProyectoComponentes\Entities\bin\Debug\CloudPatterns.AWS.dll
+C:\Users\user\Desktop\ProyectoComponentes\Entities\bin\Debug\CloudPatterns.AWS.pdb
+C:\Users\user\Desktop\ProyectoComponentes\Entities\bin\Debug\CloudPatterns.AWS.dll.config
+C:\Users\user\Desktop\ProyectoComponentes\Entities\bin\Debug\AWSSDK.pdb
+C:\Users\user\Desktop\ProyectoComponentes\Entities\obj\Debug\DynamoDbDemo.csprojAssemblyReference.cache
+C:\Users\user\Desktop\ProyectoComponentes\Entities\obj\Debug\DynamoDbDemo.csproj.CopyComplete
+C:\Users\user\Desktop\ProyectoComponentes\Entities\obj\Debug\DynamoDbDemo.exe
+C:\Users\user\Desktop\ProyectoComponentes\Entities\obj\Debug\DynamoDbDemo.pdb

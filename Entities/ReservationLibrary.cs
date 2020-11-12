@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace CloudPatterns.AWS
 {
-    class ReservationLibrary
+   public class ReservationLibrary
     {
         private readonly DynamoService _dynamoService;
 

@@ -8,7 +8,8 @@
 		customerData.name = "Paola Mora";
 		customerData.phone = 89696205;
 		this.ctrlActions.PostToAPI(this.service, customerData);
-		console.log(customerData);
+		var e = document.getElementById("fecha").value;
+		console.log(e);
 	}
 }
 

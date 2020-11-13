@@ -36,8 +36,22 @@ namespace WebApp.Helpers
 
             return new HtmlString(ctrl.GetHtml());
         }
-      
+        public static HtmlString CtrlTable(this HtmlHelper html, string viewName, string id, string title,
+      string columnsTitle, string ColumnsDataName, string onSelectFunction, string colorHeader)
+        {
+            var ctrl = new CtrlTableModel
+            {
+                ViewName = viewName,
+                Id = id,
+                Title = title,
+                Columns = columnsTitle,
+                ColumnsDataName = ColumnsDataName,
+                FunctionName = onSelectFunction
+            };
 
-       
+            return new HtmlString(ctrl.GetHtml());
+        }
+
+
     }
 }

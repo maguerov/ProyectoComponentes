@@ -26,6 +26,14 @@ namespace WebApi.Controllers
             return Ok(response);
         }
 
+        public IHttpActionResult Get(string id)
+        {
+
+            IEnumerable<Reservation> savedRes = reservationLibrary.GetAllRes();
+            response.Data = savedRes;
+            return Ok(response);
+        }
+
         public IHttpActionResult Post(Reservation res)
         {
             //comentario branch

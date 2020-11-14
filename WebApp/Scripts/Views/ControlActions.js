@@ -7,14 +7,63 @@
 	}
 
 
-	this.GetUrlApiService = function (service) {
-		return this.URL_API + service;
-	}
-
 	this.GetTableColumsDataName = function (tableId) {
 		var val = $('#' + tableId).attr("ColumnsDataName");
 
 		return val;
+	}
+	this.FillTable = function (service, tableId, refresh) {
+		if (!refresh) {
+			columns = this.GetTableColumsDataName(tableId).split(',');
+			var arrayColumnsData = [];
+
+			$.each(columns, function getRoutesByCompany(index, value) {
+				var obj = {};
+				obj.data = value;
+				arrayColumnsData.push(obj);
+			});
+
+			$('#' + tableId).DataTable({
+				"processing": true,
+				"ajax": {
+					"url": this.GetUrlApiService(service),
+					dataSrc: 'Data'
+				},
+				"columns": arrayColumnsData
+			});
+		} else {
+			//RECARGA LA TABLA
+			$('#' + tableId).DataTable().ajax.reload();
+		}
+
+	}
+
+	this.GetSelectedRow = function () {
+		var data = sessionStorage.getItem(tableId + '_selected');
+		return data;
+	};
+
+	this.SelectedRowStyle = function (tableId) {
+		var table = $('#' + tableId).DataTable();
+
+		$('#' + tableId + ' tbody').on('click', 'tr', function () {
+			if ($(this).hasClass('selected')) {
+				$(this).removeClass('selected');
+			}
+			else {
+				table.$('tr.selected').removeClass('selected');
+				$(this).addClass('selected');
+			}
+		});
+	};
+
+	this.BindFields = function (formId, data) {
+		console.log(data);
+		$('#' + formId + ' *').filter(':input').each(function (input) {
+			var columnDataName = $(this).attr("ColumnDataName");
+			console.log(data[columnDataName]);
+			this.value = data[columnDataName];
+		});
 	}
 
 	this.GetDataForm = function (formId) {
@@ -28,7 +77,6 @@
 		console.log(data);
 		return data;
 	}
-
 
 	this.PostToAPI = function (service, data) {
 		var jqxhr = $.post(this.GetUrlApiService(service), data, function (response) {
@@ -44,6 +92,13 @@
 				console.log(data);
 			})
 	};
+
+	this.GetToApi = function (service, callbackFunction) {
+		var jqxhr = $.get(this.GetUrlApiService(service), function (response) {
+			console.log("Response " + response);
+			callbackFunction(response.Data);
+		});
+	}
 }
 //Custom jquery actions
 $.put = function (url, data, callback) {

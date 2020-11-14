@@ -17,22 +17,24 @@ namespace WebApi.Controllers
     {
         ApiResponse response = new ApiResponse();
 
-        public IHttpActionResult Post(Prueba res)
+        public IHttpActionResult Post(Reservation res)
         {
+            //comentario branch
             ReservationLibrary reservationLibrary = new ReservationLibrary();
             try
             {
                 DateTime localDate = DateTime.Now;
                 //encriptar contraseña
-                Reservation res2 = new Reservation
+                res.DateTime = localDate;
+               Reservation res2 = new Reservation
                 {
-                    Fullname = "Dios",
+                    Fullname = "Dios22",
                     DateTime = localDate,
                     Phone = 888888888,
                     Email = "dios@gmail.com"
 
                 };
-                reservationLibrary.AddRes(res2);
+                reservationLibrary.AddRes(res);
                 response.Message = "Bienvido a SafeJob.";
                 
                 return Ok(response.Message);

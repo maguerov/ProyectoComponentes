@@ -3,7 +3,6 @@ using CloudPatterns.AWS.DynamoDb;
 using Entities_POJO;
 using System.Collections.Generic;
 
-
 namespace CloudPatterns.AWS
 {
    public class ReservationLibrary

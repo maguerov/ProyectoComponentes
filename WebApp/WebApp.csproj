@@ -168,7 +168,9 @@
     </Compile>
     <Compile Include="Models\Controls\CtrlBaseModel.cs" />
     <Compile Include="Models\Controls\CtrlButtonModel.cs" />
+    <Compile Include="Models\Controls\CtrlDropDownModel.cs" />
     <Compile Include="Models\Controls\CtrlInputModel.cs" />
+    <Compile Include="Models\Controls\CtrlTableModel.cs" />
     <Compile Include="Models\Helpers\ControlExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -182,7 +184,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Models\Controls\CtrlButtonModel.html" />
+    <Content Include="Models\Controls\CtrlDropDownModel.html" />
     <Content Include="Models\Controls\CtrlInputModel.html" />
+    <Content Include="Models\Controls\CtrlTableModel.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
@@ -209,6 +213,7 @@
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\jquery.dataTables.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\Views\ControlActions.js" />
     <Content Include="Scripts\Views\RegistroCancha.js" />

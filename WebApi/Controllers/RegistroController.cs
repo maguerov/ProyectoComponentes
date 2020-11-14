@@ -16,11 +16,21 @@ namespace WebApi.Controllers
     public class RegistroController:ApiController
     {
         ApiResponse response = new ApiResponse();
+        ReservationLibrary reservationLibrary = new ReservationLibrary();
+
+        public IHttpActionResult Get()
+        {
+
+            IEnumerable<Reservation> savedRes = reservationLibrary.GetAllRes();
+            response.Data = savedRes;
+            return Ok(response);
+        }
 
         public IHttpActionResult Post(Reservation res)
         {
             //comentario branch
-            ReservationLibrary reservationLibrary = new ReservationLibrary();
+            //comentario branch
+
             try
             {
                 DateTime localDate = DateTime.Now;

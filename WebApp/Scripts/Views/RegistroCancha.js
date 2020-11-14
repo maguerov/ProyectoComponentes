@@ -1,6 +1,26 @@
 ﻿function RegistroCancha() {
 	this.ctrlActions;
 	this.service = 'Registro';
+	this.tblJobsId = 'tblJobs';
+	this.columns = "Fullname,DateTime,Email";
+
+	this.RetrieveAll = function () {
+		this.ctrlActions.FillTable(this.service, this.tblJobsId, false);
+	}
+
+	this.ReloadTable = function () {
+		console.log("ReloadTable");
+		this.ctrlActions.FillTable(this.service, this.tblJobsId, true);
+	}
+
+	this.BindFields = function (data) {
+		this.ctrlActions.BindFields('frmEdition', data);
+	}
+
+	this.SelectedRow = function () {
+		this.ctrlActions.SelectedRowStyle(this.tblJobsId);
+	}
+
 	this.Registro = function () {
 		this.ctrlActions = new ControlActions();
 		var customerData = {};
@@ -16,5 +36,7 @@
 //ON DOCUMENT READY
 $(document).ready(function () {
 
-	console.log("hola");
+	var registroCancha = new RegistroCancha();
+	registroCancha.RetrieveAll();
+	registroCancha.SelectedRow();
 });

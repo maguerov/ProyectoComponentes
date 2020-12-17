@@ -5,19 +5,23 @@
 	this.columns = "Fullname,DateTime,Email";
 
 	this.RetrieveAll = function () {
+		this.ctrlActions = new ControlActions();
 		this.ctrlActions.FillTable(this.service, this.tblJobsId, false);
 	}
 
 	this.ReloadTable = function () {
+		this.ctrlActions = new ControlActions();
 		console.log("ReloadTable");
 		this.ctrlActions.FillTable(this.service, this.tblJobsId, true);
 	}
 
 	this.BindFields = function (data) {
+		this.ctrlActions = new ControlActions();
 		this.ctrlActions.BindFields('frmEdition', data);
 	}
 
 	this.SelectedRow = function () {
+		this.ctrlActions = new ControlActions();
 		this.ctrlActions.SelectedRowStyle(this.tblJobsId);
 	}
 

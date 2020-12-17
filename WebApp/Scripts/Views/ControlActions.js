@@ -6,6 +6,9 @@
 		return this.URL_API + service;
 	}
 
+	this.GetUrlApiService = function (service) {
+		return this.URL_API + service;
+	}
 
 	this.GetTableColumsDataName = function (tableId) {
 		var val = $('#' + tableId).attr("ColumnsDataName");
@@ -78,6 +81,26 @@
 		return data;
 	}
 
+	this.ShowMessage = function (type, message) {
+		if (type == 'E') {
+			$("#alert_container").removeClass("alert alert-success alert-dismissable")
+			$("#alert_container").addClass("alert alert-danger alert-dismissable");
+			$("#alert_message").text(message);
+		} else if (type == 'I') {
+			$("#alert_container").removeClass("alert alert-danger alert-dismissable")
+			$("#alert_container").addClass("alert alert-success alert-dismissable");
+			$("#alert_message").text(message);
+		}
+		$('.alert').show();
+	};
+
+	this.GetToApi = function (service, callbackFunction) {
+		var jqxhr = $.get(this.GetUrlApiService(service), function (response) {
+			console.log("Response " + response);
+			callbackFunction(response.Data);
+		});
+	}
+
 	this.PostToAPI = function (service, data) {
 		var jqxhr = $.post(this.GetUrlApiService(service), data, function (response) {
 			console.log(response);
@@ -92,13 +115,6 @@
 				console.log(data);
 			})
 	};
-
-	this.GetToApi = function (service, callbackFunction) {
-		var jqxhr = $.get(this.GetUrlApiService(service), function (response) {
-			console.log("Response " + response);
-			callbackFunction(response.Data);
-		});
-	}
 }
 //Custom jquery actions
 $.put = function (url, data, callback) {

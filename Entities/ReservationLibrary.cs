@@ -1,6 +1,7 @@
 ﻿using Amazon.DynamoDBv2.DocumentModel;
 using CloudPatterns.AWS.DynamoDb;
 using Entities_POJO;
+using System;
 using System.Collections.Generic;
 
 namespace CloudPatterns.AWS
@@ -29,9 +30,10 @@ namespace CloudPatterns.AWS
             return _dynamoService.GetAll<Reservation>();
         }
 
-        public IEnumerable<Reservation> SearchRes(string fullName, string datetime)
+        public IEnumerable<Reservation> SearchRes(string fullName, string datetime, string datetime2)
         {
-            IEnumerable<Reservation> filteredDvds = _dynamoService.DbContext.Query<Reservation>(fullName, QueryOperator.Equal, datetime);
+            var parsedDate2 = DateTime.Parse(datetime + " " + datetime2);
+            IEnumerable<Reservation> filteredDvds = _dynamoService.DbContext.Query<Reservation>(fullName, QueryOperator.Equal, parsedDate2);
 
             return filteredDvds;
         }

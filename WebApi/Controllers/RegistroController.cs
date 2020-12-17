@@ -16,19 +16,11 @@ namespace WebApi.Controllers
     public class RegistroController:ApiController
     {
         ApiResponse response = new ApiResponse();
+        EmailManager emailManager = new EmailManager();
         ReservationLibrary reservationLibrary = new ReservationLibrary();
 
         public IHttpActionResult Get()
         {
-
-            IEnumerable<Reservation> savedRes = reservationLibrary.GetAllRes();
-            response.Data = savedRes;
-            return Ok(response);
-        }
-
-        public IHttpActionResult Get(string id)
-        {
-
             IEnumerable<Reservation> savedRes = reservationLibrary.GetAllRes();
             response.Data = savedRes;
             return Ok(response);
@@ -55,6 +47,7 @@ namespace WebApi.Controllers
 
                 };
                 reservationLibrary.AddRes(res);
+                emailManager.SendEmail(res);
                 response.Message = "Bienvido a SafeJob.";
                 
                 return Ok(response.Message);

@@ -100,7 +100,15 @@
 			callbackFunction(response.Data);
 		});
 	}
+	this.PostAPI2 = function (service, data, callbackFunction, callbackFunctionError) {
+		var jqxhr = $.post(this.GetUrlApiService(service), data, function (response) {
+			callbackFunction(response);
 
+		}).fail(function (xhr, status, error) {
+			callbackFunctionError(JSON.parse(xhr.responseText).ExceptionMessage);
+		})
+
+	};
 	this.PostToAPI = function (service, data) {
 		var jqxhr = $.post(this.GetUrlApiService(service), data, function (response) {
 			console.log(response);

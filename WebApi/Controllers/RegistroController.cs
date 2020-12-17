@@ -47,7 +47,6 @@ namespace WebApi.Controllers
 
                 };
                 reservationLibrary.AddRes(res);
-                emailManager.SendEmail(res);
                 response.Message = "Bienvido a SafeJob.";
                 
                 return Ok(response.Message);

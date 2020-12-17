@@ -22,12 +22,24 @@ select,
 textarea {
    /* max-width: 280px;*/
 }
-
+.layout-bg {
+    background-image: url("../images/bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.d-lg-block {
+    display: block !important;
+}
+.bg-login-image {
+    background-image: url("../images/1.jpg");
+    background-position: center;
+    background-size: cover;
+}
 .card-header {
-    background-color: #fff;
+    background-color: #d2d2d2;
     border-radius: calc(0.35rem - 1px) calc(0.35rem - 1px) 0 0;
 }
-
 .card-middle-title {
     display: -ms-flexbox;
     display: -webkit-flex;

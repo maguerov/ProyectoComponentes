@@ -21,5 +21,12 @@ namespace WebApp.Controllers
 
             return View();
         }
+
+        public ActionResult Registro()
+        {
+            ViewBag.Title = "Listado de reservas";
+
+            return View();
+        }
     }
 }

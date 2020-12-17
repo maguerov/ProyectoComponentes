@@ -32,11 +32,8 @@
 		this.ctrlActions = new ControlActions();
 		var customerData = {};
 		customerData = this.ctrlActions.GetDataForm('frmEdition');
-		//customerData.name = "Paola Mora";
-		//customerData.phone = 89696205;
 		this.ctrlActions.PostToAPI(this.service, customerData);
-		var e = document.getElementById("fecha").value;
-		console.log(e);
+		window.location.href = 'https://localhost:44338/Home/Registro';
 	}
 	this.Actualizar = function () {
 		this.ctrlActions = new ControlActions();
@@ -54,6 +51,24 @@
 			console.log(error);
 			this.ctrlActions.ShowMessage('E', error);
 		});
+	}
+
+	this.Eliminar = function () {
+		this.ctrlActions = new ControlActions();
+		var customerData = {};
+		customerData = this.ctrlActions.GetDataForm('frmEdition');
+		customerData.Email = sessionStorage.getItem("fechaT");
+		console.log("hoollaaaa");
+		this.ctrlActions.DeleteToAPILOGIN(this.service, customerData, (response) => {
+			window.location.href = 'https://localhost:44338/Home/listado';
+		}, (error) => {
+			console.log(error);
+			this.ctrlActions.ShowMessage('E', error);
+		});
+	}
+
+	this.Login = function () {
+		window.location.href = 'https://localhost:44338/Home/Index';
 	}
 }
 

@@ -5,9 +5,9 @@
 <script src="~/Scripts/Views/RegistroCancha.js"></script>
 <!-- Page Heading -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="heading h2 mb-0 text-gray-800">Lista de las reservas en el sistema</h1>
+    <h1 class="heading h2 mb-0 text-gray-800">Reserva tu cancha</h1>
+    @Html.CtrlButton(viewName: "RegistroCancha", id: "btnLogin", label: "Iniciar sesión", onClickFunction: "Login", buttonType: "primary")
 </div>
-
 <!-- Content Row -->
 <div class="row">
 
@@ -19,8 +19,6 @@
                     <div class="card-middle-title col-md-8">Reserve una cancha de futbol</div>
                     <div class="col-md-4 text-right">
                         @Html.CtrlButton(viewName: "RegistroCancha", id: "btnCreate", label: "Reservar", onClickFunction: "Registro", buttonType: "primary")
-                        @Html.CtrlButton(viewName: "RegistroCancha", id: "btnUpdate", label: "Actualizar", onClickFunction: "Actualizar", buttonType: "primary")
-                        @Html.CtrlButton(viewName: "RegistroCancha", id: "btnDelete", label: "Eliminar", onClickFunction: "Eliminar", buttonType: "primary")
 
                     </div>
                 </div>
@@ -39,7 +37,7 @@
                             <div class="bs-component">
 
                                 @Html.CtrlInput(id: "fecha", type: "date", label: "Fecha reservacion", columnDataName: "Fecha")
-                                @Html.CtrlInput(id: "hpra", type: "time", label: "Hora reservacion", columnDataName: "Hora")
+                                @Html.CtrlInput(id: "hora", type: "time", label: "Hora reservacion", columnDataName: "Hora")
                             </div>
                         </div>
                     </div>
@@ -47,11 +45,3 @@
             </div>
         </div>
     </div>
-
-    <!-- List of Jobs -->
-    <div class="col-12">
-        @Html.CtrlTable(viewName: "RegistroCancha", id: "tblJobs", title: "Lista de Reservas de canchas",
-        columnsTitle: "Nombre,Fecha y Hora,Correo", ColumnsDataName: "Fullname,DateTime,Email",
-        onSelectFunction: "BindFields", colorHeader: "red")
-    </div>
-</div>

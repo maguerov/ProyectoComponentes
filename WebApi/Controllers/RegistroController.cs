@@ -83,5 +83,24 @@ namespace WebApi.Controllers
                 return InternalServerError(new Exception(bex.AppMessage.Message));
             }
         }
+
+        public IHttpActionResult Delete(Reservation res)
+        {
+            try
+            {
+                String[] result1 = res.Email.Split('T');
+                string date = result1[0];
+                string time = "T" + result1[1];
+                Reservation result = reservationLibrary.SearchRes(res.Fullname, date, time).SingleOrDefault();
+                reservationLibrary.DeleteRes(result);
+                response.Message = "Eliminado bien";
+                return Ok(response.Message);
+            }
+            catch (BussinessException bex)
+            {
+                return InternalServerError(new Exception(bex.AppMessage.Message));
+            }
+
+        }
     }
 }

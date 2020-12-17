@@ -131,6 +131,26 @@
 		})
 
 	};
+	this.DeleteToAPILOGIN = function (service, data, callbackFunction, callbackFunctionError) {
+		var jqxhr = $.delete(this.GetUrlApiService(service), data, function (response) {
+			callbackFunction(response);
+		}).fail(function (xhr, status, error) {
+			callbackFunctionError(JSON.parse(xhr.responseText).ExceptionMessage);
+		})
+
+	};
+	this.DeleteToAPI = function (service, data) {
+		var jqxhr = $.delete(this.GetUrlApiService(service), data, function (response) {
+			var ctrlActions = new ControlActions();
+			ctrlActions.ShowMessage('I', response.Message);
+		})
+			.fail(function (response) {
+				var data = response.responseJSON;
+				var ctrlActions = new ControlActions();
+				ctrlActions.ShowMessage('E', data.ExceptionMessage);
+				console.log(data);
+			})
+	};
 }
 //Custom jquery actions
 $.put = function (url, data, callback) {

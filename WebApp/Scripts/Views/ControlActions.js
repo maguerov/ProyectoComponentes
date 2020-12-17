@@ -1,6 +1,6 @@
 ﻿function ControlActions() {
 
-	this.URL_API = "https://localhost:44323/api/";
+	this.URL_API = "http://localhost:44323/api/";
 
 	this.GetUrlApiService = function (service) {
 		return this.URL_API + service;
@@ -122,6 +122,14 @@
 				ctrlActions.ShowMessage('E', data.ExceptionMessage);
 				console.log(data);
 			})
+	};
+	this.PutToAPILOGIN = function (service, data, callbackFunction, callbackFunctionError) {
+		var jqxhr = $.put(this.GetUrlApiService(service), data, function (response) {
+			callbackFunction(response);
+		}).fail(function (xhr, status, error) {
+			callbackFunctionError(JSON.parse(xhr.responseText).ExceptionMessage);
+		})
+
 	};
 }
 //Custom jquery actions

@@ -16,12 +16,15 @@
 	}
 
 	this.BindFields = function (data) {
+		sessionStorage.setItem("fechaT", data.DateTime);
+		sessionStorage.setItem("nombreT", data.Email);
 		this.ctrlActions = new ControlActions();
 		this.ctrlActions.BindFields('frmEdition', data);
 	}
 
 	this.SelectedRow = function () {
 		this.ctrlActions = new ControlActions();
+		console.log(this.tblJobsId);
 		this.ctrlActions.SelectedRowStyle(this.tblJobsId);
 	}
 
@@ -34,6 +37,23 @@
 		this.ctrlActions.PostToAPI(this.service, customerData);
 		var e = document.getElementById("fecha").value;
 		console.log(e);
+	}
+	this.Actualizar = function () {
+		this.ctrlActions = new ControlActions();
+		var customerData = {};
+		customerData = this.ctrlActions.GetDataForm('frmEdition');
+		var nombreOriginal = customerData.Email;
+		customerData.DateTime = sessionStorage.getItem("fechaT");
+		customerData.Email = sessionStorage.getItem("fechaT");
+		var nombreFin = customerData.Fullname + "," + nombreOriginal;
+		console.log(sessionStorage.getItem("fechaT"));
+		customerData.FullName = nombreFin;
+		this.ctrlActions.PutToAPILOGIN(this.service, customerData, (response) => {
+			window.location.href = 'https://localhost:44338/Home/listado';
+		}, (error) => {
+			console.log(error);
+			this.ctrlActions.ShowMessage('E', error);
+		});
 	}
 }
 

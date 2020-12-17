@@ -37,7 +37,13 @@ namespace CloudPatterns.AWS
 
             return filteredDvds;
         }
+        public IEnumerable<Reservation> SearchRes2(string fullName)
+        {
+            
+            IEnumerable<Reservation> filteredDvds = _dynamoService.DbContext.Query<Reservation>(fullName);
 
+            return filteredDvds;
+        }
         public void DeleteRes(Reservation res)
         {
             _dynamoService.DeleteItem(res);

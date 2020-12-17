@@ -16,7 +16,6 @@ namespace WebApi.Controllers
     public class RegistroController:ApiController
     {
         ApiResponse response = new ApiResponse();
-        EmailManager emailManager = new EmailManager();
         ReservationLibrary reservationLibrary = new ReservationLibrary();
 
         public IHttpActionResult Get()
@@ -49,6 +48,34 @@ namespace WebApi.Controllers
                 reservationLibrary.AddRes(res);
                 response.Message = "Bienvido a SafeJob.";
                 
+                return Ok(response.Message);
+            }
+            catch (BussinessException bex)
+            {
+                return InternalServerError(new Exception(bex.AppMessage.Message));
+            }
+        }
+
+        public IHttpActionResult Put(Reservation res)
+        {
+
+
+            try
+            {
+                String[] result2 = res.Fullname.Split(',');
+                String[] result1 = res.Email.Split('T');
+                string date = result1[0];
+                string time = "T" + result1[1];
+                Reservation result = reservationLibrary.SearchRes(result2[0], date, time).SingleOrDefault();
+                if (result != null)
+                {
+                    //rolo fonseca
+                    result.Email = result2[1];
+                    reservationLibrary.ModifyRes(result);
+                }
+
+                
+
                 return Ok(response.Message);
             }
             catch (BussinessException bex)

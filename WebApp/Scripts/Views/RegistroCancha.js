@@ -33,7 +33,7 @@
 		var customerData = {};
 		customerData = this.ctrlActions.GetDataForm('frmEdition');
 		this.ctrlActions.PostToAPI(this.service, customerData);
-		window.location.href = 'https://localhost:44338/Home/Registro';
+		//window.location.href = 'https://localhost:44338/Home/Registro';
 	}
 	this.Actualizar = function () {
 		this.ctrlActions = new ControlActions();

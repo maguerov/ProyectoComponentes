@@ -1,55 +1,38 @@
 ﻿@{
-    Layout = "~/Views/Shared/_Layout.cshtml";
+   Layout = "~/Views/Shared/_FormLayout.cshtml";
     ViewBag.Title = "Alquila tu cancha - Canchas disponibles en tu ciudad en tiempo real";
 }
-<script src="~/Scripts/Views/RegistroCancha.js"></script>
+<script src="~/Scripts/Views/Login.js"></script>
 <!-- Page Heading -->
-<div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="heading h2 mb-0 text-gray-800">Lista de las reservas en el sistema</h1>
-</div>
-
-<!-- Content Row -->
-<div class="row">
-
-    @*Earnings (Monthly) Card Example*@
-    <div class="col-12 mb-4">
-        <div class="card border-left-primary shadow">
-            <div class="card-header">
-                <div class="row pull-right">
-                    <div class="card-middle-title col-md-8">Reserve una cancha de futbol</div>
-                    <div class="col-md-4 text-right">
-                        @Html.CtrlButton(viewName: "RegistroCancha", id: "btnCreate", label: "Reservar cancha", onClickFunction: "Registro", buttonType: "primary")
+<div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+<div class="col-lg-6">
+    <div class="p-5">
+        <div class="text-center">
+            <!-- Please change the type of user -->
+            <h1 class="heading h2 mb-3 text-gray-800">Iniciar sesión</h1>
+        </div>
+        <div class="alert alert-success alert-dismissable" style="display: none" id="alert_container">
+            <button type="button" class="close" onclick="$('.alert').hide()">&times;</button>
+            <span id="alert_message"></span>
+        </div>
+        <!--/ Please don't remove this -->
+        <form class="frmEdition" id="frmEdition">
+            <div class="row form-group">
+                <div class="col-md-12">
+                    <div class="bs-component">
+                        @Html.CtrlInput(id: "nombre", type: "email", label: "Nombre de usuario", columnDataName: "Fullname")
+                        @Html.CtrlInput(id: "password", type: "password", label: "Contraseña", columnDataName: "Password")
                     </div>
                 </div>
             </div>
-            <div class="card-body hide">
-                <form id="frmEdition">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="bs-component">
-                                @Html.CtrlInput(id: "nombre", type: "email", label: "Nombre de usuario", columnDataName: "Fullname")
-                                @Html.CtrlInput(id: "telefono", type: "password", label: "Telefono", columnDataName: "Phone")
-                                @Html.CtrlInput(id: "correo", type: "email", label: "Correo electronico", columnDataName: "Email")
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="bs-component">
-
-                                @Html.CtrlInput(id: "fecha", type: "date", label: "Fecha reservacion", columnDataName: "Fecha")
-                                @Html.CtrlInput(id: "hpra", type: "time", label: "Hora reservacion", columnDataName: "Hora")
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
+        </form>
+        <div class="button-block">
+            @Html.CtrlButton(viewName: "Login", id: "btnLogin", label: "Iniciar sesión", onClickFunction: "Iniciar", buttonType: "primary")
         </div>
-    </div>
-
-    <!-- List of Jobs -->
-    <div class="col-12">
-        @Html.CtrlTable(viewName: "RegistroCancha", id: "tblJobs", title: "Lista de Reservas de canchas",
-        columnsTitle: "Nombre,Fecha y Hora,Correo", ColumnsDataName: "Fullname,DateTime,Email",
-        onSelectFunction: "BindFields", colorHeader: "red")
+        <hr>
+        <div class="text-center">
+            <a href="@Url.Action("ForgotPassword", "Home")">Recuperar Contraseña?</a>
+        </div>
     </div>
 </div>
 

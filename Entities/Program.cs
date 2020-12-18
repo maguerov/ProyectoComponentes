@@ -49,7 +49,7 @@ namespace CloudPatterns.AWS
             print("6. Salir");
 
             var option = Int32.Parse(Console.ReadLine());
-            string name, dateS, timeS;
+            string name, dateS, timeS,name2, dateS2;
             switch (option)
             {
                 case 1:
@@ -88,7 +88,25 @@ namespace CloudPatterns.AWS
                     print("Hora");
                     timeS = Console.ReadLine();
                     //ReadOne(name, dateS+ " "+ timeS);
-                    ReadOne(name, dateS);
+                    ReadOne(name, dateS,timeS);
+                    break;
+                case 4:
+                    print("Persona encargada de la reservación:");
+                    name2 = Console.ReadLine();
+                    print("Fecha");
+                    dateS2 = Console.ReadLine();
+                    print("Hora");
+                    timeS = Console.ReadLine();
+                    Delete(name2, dateS2,timeS);
+                    break;
+                case 5:
+                    print("Persona encargada de la reservación:");
+                    name2 = Console.ReadLine();
+                    print("Fecha");
+                    dateS2 = Console.ReadLine();
+                    print("Hora");
+                    timeS = Console.ReadLine();
+                    Update(name2, dateS2, timeS);
                     break;
                 default:
                     Console.WriteLine("Default case");
@@ -104,10 +122,10 @@ namespace CloudPatterns.AWS
             reservationLibrary.AddRes(res);
         }
 
-        public void Delete(string fullname, string date)
+        public static void Delete(string fullname, string date, string time)
         {
             /*Delete*/
-            Reservation result = reservationLibrary.SearchRes(fullname, date).SingleOrDefault();
+            Reservation result = reservationLibrary.SearchRes(fullname,date,time).SingleOrDefault();
             if (result != null)
             {
                 reservationLibrary.DeleteRes(result);
@@ -128,10 +146,10 @@ namespace CloudPatterns.AWS
             }
         }
 
-        public static void ReadOne(string fullname, string date)
+        public static void ReadOne(string fullname, string date,string time)
         {
             /*Read*/
-            Reservation result = reservationLibrary.SearchRes(fullname, date).SingleOrDefault();
+            Reservation result = reservationLibrary.SearchRes(fullname, date,time).SingleOrDefault();
 
       
                 Console.WriteLine("Items");
@@ -141,16 +159,17 @@ namespace CloudPatterns.AWS
            
         }
 
-        public void Update(string fullname, string date)
+        public static void Update(string fullname, string date,string time)
         {
-            /*Update
-            Reservation result = reservationLibrary.SearchRes(fullname, date).SingleOrDefault();
+            /*Update*/
+            Reservation result = reservationLibrary.SearchRes(fullname, date,time).SingleOrDefault();
             if (result != null)
             {
-                result.DateTime = "Will Smith";
-                reservationLibrary.ModifyDvd(result);
+                //rolo fonseca
+                result.Email = "Will Smith";
+                reservationLibrary.ModifyRes(result);
 
-            }*/ //TO DO
+            }
         }
 
         public static void print(string s)

@@ -20,15 +20,6 @@ namespace WebApi.Controllers
 
         public IHttpActionResult Get()
         {
-
-            IEnumerable<Reservation> savedRes = reservationLibrary.GetAllRes();
-            response.Data = savedRes;
-            return Ok(response);
-        }
-
-        public IHttpActionResult Get(string id)
-        {
-
             IEnumerable<Reservation> savedRes = reservationLibrary.GetAllRes();
             response.Data = savedRes;
             return Ok(response);
@@ -63,6 +54,53 @@ namespace WebApi.Controllers
             {
                 return InternalServerError(new Exception(bex.AppMessage.Message));
             }
+        }
+
+        public IHttpActionResult Put(Reservation res)
+        {
+
+
+            try
+            {
+                String[] result2 = res.Fullname.Split(',');
+                String[] result1 = res.Email.Split('T');
+                string date = result1[0];
+                string time = "T" + result1[1];
+                Reservation result = reservationLibrary.SearchRes(result2[0], date, time).SingleOrDefault();
+                if (result != null)
+                {
+                    //rolo fonseca
+                    result.Email = result2[1];
+                    reservationLibrary.ModifyRes(result);
+                }
+
+                
+
+                return Ok(response.Message);
+            }
+            catch (BussinessException bex)
+            {
+                return InternalServerError(new Exception(bex.AppMessage.Message));
+            }
+        }
+
+        public IHttpActionResult Delete(Reservation res)
+        {
+            try
+            {
+                String[] result1 = res.Email.Split('T');
+                string date = result1[0];
+                string time = "T" + result1[1];
+                Reservation result = reservationLibrary.SearchRes(res.Fullname, date, time).SingleOrDefault();
+                reservationLibrary.DeleteRes(result);
+                response.Message = "Eliminado bien";
+                return Ok(response.Message);
+            }
+            catch (BussinessException bex)
+            {
+                return InternalServerError(new Exception(bex.AppMessage.Message));
+            }
+
         }
     }
 }

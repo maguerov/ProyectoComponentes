@@ -1,0 +1,47 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Alquila tu cancha - Canchas disponibles en tu ciudad en tiempo real";
+}
+<script src="~/Scripts/Views/RegistroCancha.js"></script>
+<!-- Page Heading -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="heading h2 mb-0 text-gray-800">Reserva tu cancha</h1>
+    @Html.CtrlButton(viewName: "RegistroCancha", id: "btnLogin", label: "Iniciar sesión", onClickFunction: "Login", buttonType: "primary")
+</div>
+<!-- Content Row -->
+<div class="row">
+
+    @*Earnings (Monthly) Card Example*@
+    <div class="col-12 mb-4">
+        <div class="card border-left-primary shadow">
+            <div class="card-header">
+                <div class="row pull-right">
+                    <div class="card-middle-title col-md-8">Reserve una cancha de futbol</div>
+                    <div class="col-md-4 text-right">
+                        @Html.CtrlButton(viewName: "RegistroCancha", id: "btnCreate", label: "Reservar", onClickFunction: "Registro", buttonType: "primary")
+
+                    </div>
+                </div>
+            </div>
+            <div class="card-body hide">
+                <form id="frmEdition">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="bs-component">
+                                @Html.CtrlInput(id: "nombre", type: "email", label: "Nombre de usuario", columnDataName: "Fullname")
+                                @Html.CtrlInput(id: "telefono", type: "text", label: "Telefono", columnDataName: "Phone")
+                                @Html.CtrlInput(id: "correo", type: "email", label: "Correo electronico", columnDataName: "Email")
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="bs-component">
+
+                                @Html.CtrlInput(id: "fecha", type: "date", label: "Fecha reservacion", columnDataName: "Fecha")
+                                @Html.CtrlInput(id: "hora", type: "time", label: "Hora reservacion", columnDataName: "Hora")
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
